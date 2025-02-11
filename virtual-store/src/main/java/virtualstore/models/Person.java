@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,7 +40,6 @@ public abstract class Person implements Serializable {
 	
 	@OneToMany(mappedBy = "person",  orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Address> address = new ArrayList<Address>();
-	
 
 	public Long getId() {
 		return id;
